@@ -3,10 +3,10 @@ define(["App"], function(App) {
 	App.routes = App.routes || {};
 	
 	var routes = {
-		namespace: "main", 
-		root: true,
+		namespace: "welcome", 
+		root: false,
 		appRoutes: {
-			"": "index"
+			"test": "index"
 		}
 	}
 
