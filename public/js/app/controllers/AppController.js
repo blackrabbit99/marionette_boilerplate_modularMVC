@@ -14,10 +14,6 @@ define(['backbone', 'marionette', "App"], function(Backbone, Marionette, App) {
         });
     });
 
-    AppController.initialize = function(){
-        console.log("controllers are initialized");
-    }
-
     return Backbone.Marionette.Controller.extend(AppController);
 
 });

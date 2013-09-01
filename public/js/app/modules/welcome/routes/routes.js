@@ -6,7 +6,7 @@ define(["App"], function(App) {
 		namespace: "welcome", 
 		root: false,
 		appRoutes: {
-			"test": "index"
+			"test": "test"
 		}
 	}
 
