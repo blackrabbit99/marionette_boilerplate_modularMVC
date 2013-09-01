@@ -1,7 +1,7 @@
 // Include Desktop Specific JavaScript files here (or inside of your Desktop Controller, or differentiate based off App.mobile === false)
-require(["App", "routes", "jquery", "backbone", "marionette", "bootstrap", "backbone.validateAll"],
+require(["App", "routes", "controllers", "jquery", "backbone", "marionette", "bootstrap", "backbone.validateAll"],
     function (App, AppRouter, AppController) {
-    	debugger;
+
         App.appRouter = new AppRouter({
             controller:new AppController()
         });

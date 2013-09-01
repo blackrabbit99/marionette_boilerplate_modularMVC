@@ -1,13 +1,18 @@
 // Project module definition
 (function(global, undefined){
     var options = {
+        path: "modules/",
         routes: "/routes/routes",
-        controllers: "/controller/controller"
+        controllers: "/controllers/controllers"
     };
 
     var availableModules = [
         {
             path: "main",
+            enable: true
+        },
+        {
+            path: "welcome",
             enable: true
         }
     ];
@@ -19,7 +24,7 @@
         getRoutesPath: function(){
             var routesPath = [];
             for(var i = 0; i < availableModules.length; i++){
-                routesPath.push(availableModules[i].path + options.routes);
+                routesPath.push(options.path + availableModules[i].path + options.routes);
             }
 
             return routesPath;
@@ -27,7 +32,7 @@
         getControllerPath: function(){
             var controllerPath = [];
             for(var i = 0; i < availableModules.length; i++){
-                controllerPath.push(availableModules[i].path + options.controllers);
+                controllerPath.push(options.path + availableModules[i].path + options.controllers);
             }
 
             return controllerPath;  
@@ -41,7 +46,7 @@
         paths:{
             // core handlers
             "routes": "./routers/AppRouter",
-            "controller": "./routers/AppControlles",
+            "controllers": "./controllers/AppController",
 
             // Core Libraries
             "jquery":"../libs/jquery",
@@ -68,7 +73,7 @@
                 "deps": params.getRoutesPath()
             },
 
-            "controller": {
+            "controllers": {
                 "deps": params.getControllerPath()
             },
 
